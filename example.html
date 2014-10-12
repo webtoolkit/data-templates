@@ -1,0 +1,30 @@
+<div id="demo-template" style="display: none;">
+    <img data-tpl data-tpl-src="data.image.src" data-tpl-alt="data.image.alt" />
+    <h1 data-tpl data-tpl-text="data.title"></h1>
+    <p data-tpl data-tpl-text="data.description"></p>
+    <a data-tpl data-tpl-href="data.href">Go</a>
+</div>
+<div id="target"></div>
+
+
+<script src="data-templates.js"></script>
+<script>
+    var template, target;
+
+    // Get the template and target
+    template = new Template(document.getElementById('demo-template'));
+    target = document.getElementById('target');
+
+    // Render the template inside the target
+    target.appendChild(
+        template.render({
+            title: 'Hello world',
+            image: {
+                src: 'http://placehold.it/300x300',
+                alt: 'Image of hello world.'
+            },
+            description: 'Lorem ipsum...',
+            href: 'http://jrnv.nl/'
+        })
+    );
+</script>
