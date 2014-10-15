@@ -45,3 +45,6 @@ As the content of the data attribute is just JavaScript, you can also do more co
 <!-- Simple if -->
 <span data-tpl data-tpl-text="data.wants_something ? data.something : ''"></span>
 ```
+
+## Want to know more?
+I've written a blog article about this, you can read it [here](http://jrnv.nl/url-here). There are a few examples there.
